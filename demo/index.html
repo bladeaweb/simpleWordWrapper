@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test simpleWordsWrapper</title>
+</head>
+<body>
+<p>test test2 test3 test4 test5 test6</p>
+<p>test2-1 test2-2 test2-3 test2-4 test2-5 test2-6 test2-7 </p>
+<!-- Js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../source/js/simpleWordWrapper.js"></script>
+<script>
+	$(document).ready(function () {
+		$('p').simpleWordWrapper({
+			eachWord: true,
+			separator: " "
+		})
+	});
+</script>
+<!-- /Js -->
+</body>
+</html>
