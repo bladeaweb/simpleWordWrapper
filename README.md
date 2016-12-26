@@ -4,13 +4,13 @@ v.1.0.0
 ### What is it?
 >It's a little jQuery module developed to help for website developers, when 
 they need to wrap each word or divided the words to some groups. For example 
-in menu, when you need divided link's text in two group but you couldn't  
-do this in back-end of your CMS.
+in menu, when you need divided link's text in two group but you couldn't do this in back-end of your CMS.
 
 ### [Demo](https://bladeaweb.github.io/simpleWordWrapper/)
 
 ### 1.Getting Started
 * Download source or clone repository
+
 ###### If you use Bower
 ```
     bower install simpleWordWrapper -save
