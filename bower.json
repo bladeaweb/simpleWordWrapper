@@ -1,0 +1,25 @@
+{
+  "name": "simpleWordWrapper",
+  "homepage": "https://github.com/bladeaweb/simpleWordWrapper",
+  "authors": [
+    "Alexander Sharkov <blade.didan@gmail.com>"
+  ],
+  "description": "It's a little jQuery module developed to help for website developers, when they need to wrap each word or divided the words to some groups. For example in menu, when you need divided link's text in two group but you couldn't do this in back-end of your CMS.",
+  "main": "source/js/simpleWordWrapper.min.js",
+  "keywords": [
+    "simple word wrapper",
+    "word wrapper",
+    "jQuery word wrapper",
+    "jQuery simple word wrapper",
+    "jQuery",
+    "jQuery plugin",
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

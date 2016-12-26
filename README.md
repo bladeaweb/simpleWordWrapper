@@ -1,5 +1,5 @@
 # simpleWordWrapper by Alexander Sharkov
-v.1.0
+v.1.0.0
 
 ### What is it?
 >It's a little jQuery module developed to help for website developers, when 
@@ -17,7 +17,7 @@ do this in back-end of your CMS.
 ```
 ###### If you use NPM
 ```
-    npm install simpleWordWrapper
+    npm install simplewordwrapper
 ```
 * Load jQuery(1.7+) 
 * Include source files simpleWordWrapper.min.js or simpleWordWrapper.js 
