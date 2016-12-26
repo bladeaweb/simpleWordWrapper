@@ -24,8 +24,9 @@
 		var init = function init() {
 			for(var i = 0; i < element.length; i++){
 				element[i].innerHTML = (element[i].innerHTML[element[i].innerHTML.length - 1] == separator) ? element[i].innerHTML.slice(0, -1) : element[i].innerHTML;
+				element[i].innerHTML = (element[i].innerHTML[0] == separator) ? element[i].innerHTML.slice(1, element[i].innerHTML.length) : element[i].innerHTML;
 				var itemArray = element[i].innerHTML.split(separator);
-				element[i].innerHTML =  eachWords ? eachWordsMode(itemArray) : defaultMode(itemArray);
+				element[i].innerHTML =  (eachWords || parseInt(itemArray.length/parts) < 2) ? eachWordsMode(itemArray) : defaultMode(itemArray);
 			}
 		}();
 		function eachWordsMode(item) {
