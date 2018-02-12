@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "It's a little jQuery module developed to help for website developers, when they need to wrap each word or divided the words to some groups. For example in menu, when you need divided link's text in two group but you couldn't do this in back-end of your CMS.",
   "main": "source/js/simpleWordWrapper.min.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bladeaweb/simpleWordWrapper.git"
@@ -23,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/bladeaweb/simpleWordWrapper/issues"
   },
-  "homepage": "https://github.com/bladeaweb/simpleWordWrapper#readme"
+  "homepage": "https://github.com/bladeaweb/simpleWordWrapper#readme",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "postinstall": "npm run default",
+    "dev": "node_modules/grunt-cli/bin/grunt dev",
+    "default": "node_modules/grunt-cli/bin/grunt"
+  }
 }
