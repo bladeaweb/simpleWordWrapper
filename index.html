@@ -39,7 +39,7 @@
 <hr>
 <div class="container">
   <h4>Example with script and without it.</h4>
-  <h5>For clarity I displayed .simpleWordWrapper like a block</h5>
+  <h5>For clarity I displayed .simpleWordWrapper like blocks</h5>
   <h6>Without script</h6>
   <p class="">test test2 test3 test4 test5 test6</p>
   <h6>With script</h6>
@@ -54,7 +54,7 @@
   <xmp>
     <script>
       $(document).ready(function () {
-        $('.example1').simpleWordWrapper({
+        $('.example2').simpleWordWrapper({
           eachWord: true
         })
       });
@@ -85,9 +85,145 @@
 <hr>
 <div class="container">
   <h4>Example with script and without it.</h4>
-  <h5>For clarity I displayed .simpleWordWrapper like a block</h5>
+  <h5>For clarity I displayed .simpleWordWrapper like blocks</h5>
   <p class="">test test2 test3 test4 test5 test6</p>
   <p class="example2">test test2 test3 test4 test5 test6</p>
+</div>
+<hr>
+
+<h2>Example #3 (eachWord mode + dot'n return separator)</h2>
+<hr>
+<div class="container">
+  <h4>javascript code</h4>
+  <xmp>
+    <script>
+      $(document).ready(function () {
+        $('.example3').simpleWordWrapper({
+          eachWord: true,
+          returnSeparator: false
+        })
+      });
+    </script>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>HTML code</h4>
+  <xmp>
+    <p class="example3">test test2 test3 test4 test5 test6</p>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>HTML Result, after the script have worked</h4>
+  <xmp>
+    <p class="example3">
+      <span class="simpleWordWrapper simpleWordWrapper-1">test</span>
+      <span class="simpleWordWrapper simpleWordWrapper-2">test2</span>
+      <span class="simpleWordWrapper simpleWordWrapper-3">test3</span>
+      <span class="simpleWordWrapper simpleWordWrapper-4">test4</span>
+      <span class="simpleWordWrapper simpleWordWrapper-5">test5</span>
+      <span class="simpleWordWrapper simpleWordWrapper-6">test6</span>
+    </p>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>Example with script and without it.</h4>
+  <h5>For clarity I displayed .simpleWordWrapper like blocks</h5>
+  <p class="">test test2 test3 test4 test5 test6</p>
+  <p class="example3">test test2 test3 test4 test5 test6</p>
+</div>
+<hr>
+
+<h2>Example #4 (eachWord mode & change result separator)</h2>
+<hr>
+<div class="container">
+  <h4>javascript code</h4>
+  <xmp>
+    <script>
+      $(document).ready(function () {
+        $('.example3').simpleWordWrapper({
+          eachWord: true,
+          returnSeparator: ' - '
+        })
+      });
+    </script>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>HTML code</h4>
+  <xmp>
+    <p class="example4">test test2 test3 test4 test5 test6</p>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>HTML Result, after the script have worked</h4>
+  <xmp>
+    <p class="example4">
+      <span class="simpleWordWrapper simpleWordWrapper-1">test - </span>
+      <span class="simpleWordWrapper simpleWordWrapper-2">test2 - </span>
+      <span class="simpleWordWrapper simpleWordWrapper-3">test3 - </span>
+      <span class="simpleWordWrapper simpleWordWrapper-4">test4 - </span>
+      <span class="simpleWordWrapper simpleWordWrapper-5">test5 - </span>
+      <span class="simpleWordWrapper simpleWordWrapper-6">test6</span>
+    </p>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>Example with script and without it.</h4>
+  <h5>For clarity I displayed .simpleWordWrapper like inline</h5>
+  <p class="">test test2 test3 test4 test5 test6</p>
+  <p class="example4">test test2 test3 test4 test5 test6</p>
+</div>
+<hr>
+
+<h2>Example #5 (eachWord mode + change result separator & add separator to last result item)</h2>
+<hr>
+<div class="container">
+  <h4>javascript code</h4>
+  <xmp>
+    <script>
+      $(document).ready(function () {
+        $('.example5').simpleWordWrapper({
+          eachWord: true,
+          returnSeparator: ': ',
+          lastSeparator: true
+        })
+      });
+    </script>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>HTML code</h4>
+  <xmp>
+    <p class="example5">test test2 test3 test4 test5 test6</p>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>HTML Result, after the script have worked</h4>
+  <xmp>
+    <p class="example5">
+      <span class="simpleWordWrapper simpleWordWrapper-1">test: </span>
+      <span class="simpleWordWrapper simpleWordWrapper-2">test2: </span>
+      <span class="simpleWordWrapper simpleWordWrapper-3">test3: </span>
+      <span class="simpleWordWrapper simpleWordWrapper-4">test4: </span>
+      <span class="simpleWordWrapper simpleWordWrapper-5">test5: </span>
+      <span class="simpleWordWrapper simpleWordWrapper-6">test6: </span>
+    </p>
+  </xmp>
+</div>
+<hr>
+<div class="container">
+  <h4>Example with script and without it.</h4>
+  <h5>For clarity I displayed .simpleWordWrapper like blocks</h5>
+  <p class="">test test2 test3 test4 test5 test6</p>
+  <p class="example5">test test2 test3 test4 test5 test6</p>
 </div>
 <hr>
 <!-- Js -->
@@ -95,10 +231,23 @@
 <script src="source/js/simpleWordWrapper.min.js"></script>
 <script>
 	$(document).ready(function () {
-		$('.example1').simpleWordWrapper()
+		$('.example1').simpleWordWrapper();
     $('.example2').simpleWordWrapper({
       eachWord: true
-    })
+    });
+    $('.example3').simpleWordWrapper({
+      eachWord: true,
+      returnSeparator: false
+    });
+    $('.example4').simpleWordWrapper({
+      eachWord: true,
+      returnSeparator: ' - '
+    });
+    $('.example5').simpleWordWrapper({
+      eachWord: true,
+      returnSeparator: ': ',
+      lastSeparator: true
+    });
 	});
 </script>
 <!-- /Js -->
