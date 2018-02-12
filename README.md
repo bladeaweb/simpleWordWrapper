@@ -1,10 +1,14 @@
 # simpleWordWrapper by Alexander Sharkov
-v.1.0.0
+v.1.1.0
 
 ### What is it?
 >It's a little jQuery module developed to help for website developers, when 
 they need to wrap each word or divided the words to some groups. For example 
 in menu, when you need divided link's text in two group but you couldn't do this in back-end of your CMS.
+
+### What's new:
+> * Added new option for return or not, or changing separator for result items.
+> * Added option for adding separator for last result item.
 
 ### [Demo](https://bladeaweb.github.io/simpleWordWrapper/)
 
@@ -44,7 +48,9 @@ $("#some-id").simpleWordWrapper({
     parts: 2,
     wrapperTag: "span",
     wrapperClass: "simpleWordWrapper",
-    eachWord: false
+    eachWord: false,
+    returnSeparator: true,
+    lastSeparator: false
 });
 ```
 ### 3.Options list
@@ -55,3 +61,5 @@ parts | number | 2 | That option need for select on how many groups you need to 
 wrapperTag | string | "span" | In this option you can determine tag name for wrapper. |
 wrapperClass | string | "simpleWordWrapper" | In this option you can determine class name for wrapper. |
 eachWord | boolean | false | If you change value this option from **false** to **true** you disabled option ***parts***, and each words or group of words, divided ***separator***, will wrap in a ***wrapperTag*** with a ***wrapperClass***. | 
+returnSeparator | boolean/string | true | This option adding an possibility to change result items separator returning. Should be ***Boolean*** or ***String***. If you set it as string to end of each result item will have been adding your value.| 
+lastSeparator | boolean | false | This option adding an possibility to return separator for last item result. | 
